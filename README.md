@@ -18,4 +18,5 @@
 * Fetching APIS 
 * GET And Post request methods
 
-
+#### A Look at Image
+![Screenshot (33)](https://user-images.githubusercontent.com/91521477/204471595-182d77be-a9d1-4127-9100-5171e234179b.png)
