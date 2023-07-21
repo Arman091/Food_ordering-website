@@ -2,7 +2,7 @@ import { useState } from "react";
 import Header from "./components/layout/Header";
 import Meals from "./components/Meals/Meals";
 import Cart from "./components/Cart/cart";
-import ContextProvider from "./components/myassets/ContextProvider";
+import ContextProvider from "./components/store/ContextProvider";
 
 function App() {
 

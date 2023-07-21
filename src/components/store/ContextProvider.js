@@ -59,6 +59,8 @@ const reducerFuntion = (state, action) => {
     return defaultState;
   }
 }
+
+// COMPONENT CODE STARTS HERE
 const ContextProvider = (props) => {
   const [stateSnap, dispatch] = useReducer(reducerFuntion, defaultState);
   const AddItemHandler = (item) => {
