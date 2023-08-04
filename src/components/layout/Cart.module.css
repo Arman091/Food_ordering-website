@@ -4,7 +4,7 @@
   border: none;
   background-color: #4d1601;
   color: white;
-  padding: 0.75rem 3rem;
+  padding: 0.45rem 3rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -55,5 +55,14 @@
   }
   100% {
     transform: scale(1);
+  }
+}
+
+
+@media (max-width: 600px) {
+  .button {
+    height: 33px;
+    width: 160px;
+    font-size: 9px;
   }
 }

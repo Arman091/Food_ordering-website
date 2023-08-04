@@ -56,9 +56,12 @@ const reducerFuntion = (state, action) => {
       items: updatedItems,
       totalPrice: totalPrice,
     };
+  }
+  if (action.type === "CLEAR") {
     return defaultState;
   }
-}
+  return defaultState;
+};
 
 // COMPONENT CODE STARTS HERE
 const ContextProvider = (props) => {
@@ -70,6 +73,8 @@ const ContextProvider = (props) => {
   const removeItemHandler = (id) => {
     dispatch({ type: "REMOVE", id: id });
   };
+
+  const clearCartHandler = () => [dispatch({ type: "CLEAR" })];
   // ============================================cart context provider====================
   // ============== import cartvalue CONTEXT from COntext and pass it as value
   const cartValue = {
@@ -77,6 +82,7 @@ const ContextProvider = (props) => {
     totalPrice: stateSnap.totalPrice,
     addItem: AddItemHandler,
     removeItem: removeItemHandler,
+    clearCart: clearCartHandler,
   };
   return (
     <CartValue.Provider value={cartValue}>{props.children}</CartValue.Provider>
